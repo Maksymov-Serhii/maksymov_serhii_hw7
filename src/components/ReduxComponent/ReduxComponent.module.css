@@ -6,8 +6,8 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 .redux-app h3 {
   margin: 0;
-  text-align: center;
 }
