@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from "uuid";
 
 class AddTask extends React.Component {
 
@@ -15,8 +16,14 @@ class AddTask extends React.Component {
   
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
-    this.props.onAddItem(this.state.value);
+    if (this.state.value) {
+      const item = {
+        value: this.state.value,
+        id: v4(),
+      }
+      this.props.onAddItem(item);      
+    }
+    this.setState({value: ''})
   }
 
   render() {

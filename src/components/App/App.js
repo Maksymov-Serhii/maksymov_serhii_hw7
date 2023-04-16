@@ -9,6 +9,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.handleAddListItem = this.handleAddListItem.bind(this);
+    this.handleDeleteListItem = this.handleDeleteListItem.bind(this);
   }
 
   state = {
@@ -16,15 +17,23 @@ class App extends React.Component {
   }
 
   handleAddListItem(item) {
-
+    const updatedList = [...this.state.list, item];
+    this.setState({
+      list: updatedList
+    })
   }
 
+  handleDeleteListItem(id) {
+    const updatedList = this.state.list.filter(item => item.id !== id);
+    this.setState({list: updatedList})
+  }
+  
   render() {
     return (
     <div className="App">
       <Header listCount={ this.state.list.length } />
         <AddTask onAddItem={ this.handleAddListItem } />
-      <TodoList />
+      <TodoList list={ this.state.list } onDeleteListItem={ this.handleDeleteListItem } />
     </div>
   );
   }

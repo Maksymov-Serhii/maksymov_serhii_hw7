@@ -7,4 +7,9 @@
   font-size: calc(10px + 2vmin);
   padding-top: 15px;  
   background-color: white;
+  border-radius: 10px;
+}
+::selection {
+  color: #ffff;
+  background: rgb(142, 73, 232);
 }
