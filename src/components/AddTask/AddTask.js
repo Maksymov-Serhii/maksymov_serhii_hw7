@@ -1,5 +1,7 @@
 import React from "react";
 import { v4 } from "uuid";
+import styles from "./AddTask.module.css"
+import Icon from "../Icon/Icon";
 
 class AddTask extends React.Component {
 
@@ -28,9 +30,14 @@ class AddTask extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <input value={this.state.value} onChange={this.handleChange.bind(this)} type="text" placeholder="Add your new todo" />
-        <input type="submit" />
+      <form onSubmit={this.handleSubmit.bind(this)} className={styles["input-form"]}>
+
+        <input value={this.state.value} onChange={this.handleChange.bind(this)} type="text" placeholder="Add your new todo" className={styles["input-field"]} />
+        
+        <button className={styles["submit-button"]}>
+          <Icon type="add" />
+        </button> 
+        
       </form>
     )
   }

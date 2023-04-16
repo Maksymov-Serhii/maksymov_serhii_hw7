@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.0001 2.84955C17.0538 2.84955 21.1506 6.94636 21.1506 12C21.1506 17.0537 17.0538 21.1505 12.0001 21.1505C6.94642 21.1505 2.84961 17.0537 2.84961 12C2.84961 6.94636 6.94642 2.84955 12.0001 2.84955Z" stroke="#1C1C1C" stroke-width="1.69904"/>
-<path d="M10.1831 13.0449L10.6943 13.5561C10.9767 13.8384 11.4344 13.8384 11.7168 13.5561L14.2729 11" stroke="#DF1463" stroke-width="1.7" stroke-linecap="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<path d="M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,2c-4.4,0-8,3.6-8,8s3.6,8,8,8s8-3.6,8-8S14.4,2,10,2
+	z"/>
+<path d="M7.3,13.7l-2-2c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0L8,11.6l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6
+	C8.3,14.1,7.7,14.1,7.3,13.7z"/>
 </svg>
