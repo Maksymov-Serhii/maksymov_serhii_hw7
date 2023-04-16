@@ -14,9 +14,9 @@ class TodoList extends React.Component {
         {this.props.list.map(item => {
           const { id, value } = item;
           return (
-            <li key={id}>
+            <li key={id} className={styles["list-item"]}>
               <input type="checkbox" />
-              {value}
+              <p>{value}</p>
               <button onClick={this.handleDelete.bind(this, id)}><Icon type="delete" /></button>
             </li>
           )

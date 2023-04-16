@@ -32,7 +32,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <Header listCount={ this.state.list.length } />
-        <AddTask onAddItem={ this.handleAddListItem } />
+      <AddTask onAddItem={ this.handleAddListItem } />
       <TodoList list={ this.state.list } onDeleteListItem={ this.handleDeleteListItem } />
     </div>
   );

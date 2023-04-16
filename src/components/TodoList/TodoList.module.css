@@ -2,8 +2,37 @@
   list-style-type: none;
   padding: 0;
 }
-.list li {
+.list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  padding: 5px;
+}
+.list-item input {
+  margin-right: 10px;
+}
+.list-item p {
+  max-width: 85%;
+  overflow: hidden;
+  word-wrap: break-word;
+  margin: 0;
+}
+.list-item button {
+  /* display: flex; */
+  width: 50px;
+  height: 50px;
+  padding: 5px 7px;
+  border: none;
+  outline: none;
+  background: red;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+}
+.list-item button:hover {
+  background: rgb(200, 0, 0);
 }
