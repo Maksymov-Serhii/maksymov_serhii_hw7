@@ -9,7 +9,9 @@ class NewAddTask extends React.Component {
     super();
     this.state = {
       value: '',
+      showModal: false,
     }
+    this.defaultState = this.state;
   }
 
   handleChange(event) {
@@ -24,21 +26,42 @@ class NewAddTask extends React.Component {
         id: v4(),
       }
       this.props.onAddItem(item);      
+      this.setState(this.defaultState);
     }
-    this.setState({value: ''})
+  }
+
+  handleModalOpen() {
+    this.setState({ showModal: true });
+  }
+
+  handleModalClose() {
+    this.setState(this.defaultState);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)} className={styles["input-form"]}>
-
-        <input value={this.state.value} onChange={this.handleChange.bind(this)} type="text" placeholder="Add your new todo" className={styles["input-field"]} />
-        
-        <button className={styles["submit-button"]}>
+      <div className={styles["input-form"]}>
+        <button className={styles["add-button"]} onClick={this.handleModalOpen.bind(this)}>
           <Icon type="add" />
         </button> 
-        
-      </form>
+
+        {this.state.showModal && (
+          <div className={styles["modal-overlay"]}>
+            <div className={styles["modal-container"]}>
+
+              <input type="text" value={this.state.value} onChange={this.handleChange.bind(this)} placeholder="Add your new todo" className={styles["modal-input"]} />
+
+              <button className={styles["modal-submit-button"]} disabled={!this.state.value} onClick={this.handleSubmit.bind(this)}>Додати</button>
+
+              <button className={styles["modal-close-button"]} onClick={this.handleModalClose.bind(this)}>
+                Відмінити
+              </button>
+              
+            </div>
+          </div>
+        )}
+
+      </div>      
     )
   }
 }
