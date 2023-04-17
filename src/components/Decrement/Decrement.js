@@ -15,10 +15,4 @@ class Decrement extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    counter: state
-  }
-};
-
-export default connect(mapStateToProps)(Decrement);
+export default connect()(Decrement);

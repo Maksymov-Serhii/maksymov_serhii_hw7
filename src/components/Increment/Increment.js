@@ -15,10 +15,4 @@ class Increment extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    counter: state
-  }
-};
-
-export default connect(mapStateToProps)(Increment);
+export default connect()(Increment);
