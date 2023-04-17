@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className={styles.header}>
-        <h2>Todo App</h2>
+        <h2>{this.props.appName}</h2>
         <p>You have {this.props.listCount} Todos</p>
       </header>
     )
