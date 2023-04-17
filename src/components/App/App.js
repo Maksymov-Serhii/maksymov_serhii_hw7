@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoApp from '../TodoApp/TodoApp';
 import ReduxComponent from '../ReduxComponent/ReduxComponent';
+import NewTodoApp from '../NewTodoApp/NewTodoApp';
 
 class App extends React.Component {
   
@@ -9,6 +10,7 @@ class App extends React.Component {
     <div className="App">
       <TodoApp />
       <ReduxComponent />
+      <NewTodoApp />
     </div>
   );
   }
