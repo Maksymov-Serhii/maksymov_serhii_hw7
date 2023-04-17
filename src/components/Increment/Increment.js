@@ -1,9 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
-const incrementAction = {
-  type: "INC"
-}
+import { incrementAction } from "../redux/actions";
 
 class Increment extends React.Component {
 
