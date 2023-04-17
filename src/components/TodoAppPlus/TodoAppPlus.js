@@ -1,8 +1,8 @@
 import React from 'react';
-import AddTask from '../AddTask/AddTask';
 import Header from '../Header/Header';
 import TodoList from '../TodoList/TodoList';
 import styles from './TodoAppPlus.module.css';
+import AddTaskPlus from '../AddTaskPlus/AddTaskPlus';
 
 class TodoAppPlus extends React.Component {
 
@@ -31,8 +31,8 @@ class TodoAppPlus extends React.Component {
   render() {
     return (
     <div className={styles["todo-app"]}>
-        <Header listCount={this.state.list.length} appName="Todo App Plus" />
-      <AddTask onAddItem={ this.handleAddListItem } />
+      <Header listCount={this.state.list.length} appName="Todo App Plus" />
+      <AddTaskPlus onAddItem={ this.handleAddListItem } />
       <TodoList list={ this.state.list } onDeleteListItem={ this.handleDeleteListItem } />
     </div>
   );

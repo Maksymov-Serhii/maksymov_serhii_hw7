@@ -4,8 +4,24 @@ import Icon from "../Icon/Icon";
 
 class TodoList extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {
+      checkedItems: {},
+    }
+  }
+
   handleDelete(id) {
     this.props.onDeleteListItem(id);
+  }
+
+  handleCheckboxChange(id) {
+    this.setState(prevState => ({
+      checkedItems: {
+        ...prevState.checkedItems,
+        [id]: !prevState.checkedItems[id]
+      }
+    }));
   }
 
   render() {
@@ -13,11 +29,15 @@ class TodoList extends React.Component {
       <ul className={styles.list}>
         {this.props.list.map(item => {
           const { id, value } = item;
+          const isChecked = this.state.checkedItems[id] || false;
+          const listItemClassName = isChecked ? styles["list-item-checked"] : styles["list-item"];
           return (
-            <li key={id} className={styles["list-item"]}>
-              <input type="checkbox" />
-              <p>{value}</p>
-              <button onClick={this.handleDelete.bind(this, id)}><Icon type="delete" /></button>
+            <li key={id} className={listItemClassName}>
+              <input type="checkbox"
+                     checked={isChecked}
+                     onChange={this.handleCheckboxChange.bind(this, id)}/>
+              <p className={styles["list-item-paragraph"]}>{value}</p>
+              <button className={styles["delete-button"]} onClick={this.handleDelete.bind(this, id)}><Icon type="delete" /></button>
             </li>
           )
         })}
