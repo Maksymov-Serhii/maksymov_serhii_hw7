@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { decrementAction } from "../redux/actions";
+import { decrementAction } from "../../redux/actions";
 
 class Decrement extends React.Component {
 
