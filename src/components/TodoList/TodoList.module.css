@@ -25,7 +25,6 @@
   margin-right: 10px;
 }
 .list-item-paragraph {
-  max-width: 85%;
   overflow: hidden;
   word-wrap: break-word;
   margin: 0;
@@ -44,4 +43,11 @@
 }
 .delete-button:hover {
   background: rgb(200, 0, 0);
+}
+input[type="checkbox"] {
+  margin: 0;
+}
+.checkbox-container {
+  width: 50px;
+  text-align: center;
 }

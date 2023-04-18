@@ -33,9 +33,11 @@ class TodoList extends React.Component {
           const listItemClassName = isChecked ? styles["list-item-checked"] : styles["list-item"];
           return (
             <li key={id} className={listItemClassName}>
-              <input type="checkbox"
-                     checked={isChecked}
-                     onChange={this.handleCheckboxChange.bind(this, id)}/>
+              <div className={styles["checkbox-container"]}>
+                <input type="checkbox"
+                checked={isChecked}
+                onChange={this.handleCheckboxChange.bind(this, id)} />
+              </div>
               <p className={styles["list-item-paragraph"]}>{value}</p>
               <button className={styles["delete-button"]} onClick={this.handleDelete.bind(this, id)}><Icon type="delete" /></button>
             </li>
